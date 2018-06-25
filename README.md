@@ -15,8 +15,19 @@ I have used this library to use some icons and some very cool buttons that has w
 ## Installation
 
  To lunch this app 
-+ clone this project from this link or you can type the command below into your git terminal.
++ clone this project from above green button or you can type the command below into your git terminal.
 
-` git clone `
+    `$ git clone https://github.com/ShitalSB/Shopping-cart-React.git Shopping-cart`
 
- 
++ Go into the shopping cart
+
+    `$ cd Shopping-cart/`
++ Install npm
+    
+    `$ npm install`
+
++ Start the npm
+
+  `$ npm start`
+
+ _**Buy your products**_ 😉
