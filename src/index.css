@@ -5,13 +5,13 @@ body {
 }
 
 .menu{
-  text-align: right;
-    background-color: #0b1740;
+    background-color: #000000;
 }
 a{
   color:rgb(145, 134, 134);
   text-decoration: none;
-  
+  background-image:url("http://appcenter.bronto.com/wp-content/uploads/2017/03/9.1_CORP_appCenter_icon_cart_recovery@2x.png");
+  font-size: 20px;
 }
 li {
   border: 1px solid rgb(174, 171, 171);
@@ -120,8 +120,9 @@ h1 {
 
 footer {
   text-align: center;
-  width: 900px;
-  margin: 0 auto;
-  background-color: darkcyan;
+  background-color: rgb(0, 0, 0);
   border-radius: 3px;
+  height:50px;
+  padding-top: 20px;
+  color:darkcyan;
 }

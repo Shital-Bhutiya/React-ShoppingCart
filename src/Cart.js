@@ -4,7 +4,6 @@ import Delete from "@material-ui/icons/Delete";
 import Home from "@material-ui/icons/Home";
 import IconButton from "@material-ui/core/IconButton";
 class Cart extends Component {
-  
   render() {
     return (
       <div>
@@ -14,7 +13,6 @@ class Cart extends Component {
           </Link>
         </div>
         {this.props.cart.length === 0 && <h1>Your cart is empty</h1>}
-
         {this.props.cart.length > 0 && (
           <table border="1px solid black">
             <tbody>
@@ -22,28 +20,32 @@ class Cart extends Component {
                 <tr key={index}>
                   <td>{item.name}</td>
                   <td>
-                    <img src={item.url} alt={item.name}/>
+                    <img src={item.url} alt={item.name} />
                   </td>
                   <td>
-                    <button className='add' onClick={()=>this.props.decreaseQuantity(index)}>
-                        -
+                    <button
+                      className="add"
+                      onClick={() => this.props.decreaseQuantity(index)}
+                    >
+                      -
                     </button>
                     <span>{item.quantity}</span>
-                    <button className='reduce' onClick={()=>this.props.increaseQuantity(index)}>
-                       +
+                    <button
+                      className="reduce"
+                      onClick={() => this.props.increaseQuantity(index)}
+                    >
+                      +
                     </button>
-                </td>
-
+                  </td>
                   <td>{item.price}</td>
+                  <td>{item.price * item.quantity}</td>
                   <td>
                     <IconButton
                       color="primary"
                       aria-label="Add to shopping cart"
                     >
                       <Delete
-                        onClick={() =>
-                          this.props.removeItemFromCart(item, index)
-                        }
+                        onClick={() => this.props.removeItemFromCart(index)}
                       />
                     </IconButton>
                   </td>
@@ -51,7 +53,7 @@ class Cart extends Component {
               ))}
               <tr>
                 <td colSpan="5" style={{ textAlign: "right" }}>
-                  Total: ${" "}
+                  Total: $
                   {this.props.cart.reduce((acc, curr) => {
                     return acc + curr.price * curr.quantity;
                   }, 0)}
